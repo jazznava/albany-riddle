@@ -40,6 +40,9 @@
   .unit b { display: block; font-size: 2rem; color: var(--accent); }
   .unit span { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
   img { display: block; width: 100%; height: auto; border-radius: 8px; }
+  body.open { align-items: flex-start; }
+  body.open main { padding: 0; max-width: 720px; }
+  body.open img { border-radius: 0; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -78,6 +81,7 @@
     img.src = 'images/riddle-brithday.jpeg';
     img.alt = 'Misión: Tu cumpleaños — una aventura pirata con un gran tesoro';
     revealed.appendChild(img);
+    document.body.classList.add('open');
     locked.hidden = true;
     revealed.hidden = false;
   }
